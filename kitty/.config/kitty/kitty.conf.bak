@@ -1,0 +1,80 @@
+# Set default shell
+shell /usr/bin/zsh
+
+# Font settings
+font_family MesloLGS NF
+font_size 14.0
+
+bold_font family='MesloLGS NF' style=Bold
+italic_font family='MesloLGS NF' style=Italic
+bold_italic_font family='MesloLGS NF' style=BoldItalic
+
+# Cursor appearance
+cursor_shape block
+cursor_beam_thickness 2.0
+cursor_underline_thickness 2.0
+cursor_stop_blinking_after 15.0
+
+# Window appearance
+background_opacity 0.95
+dim_opacity 0.50
+hide_window_decorations yes
+background_blur 25
+
+draw_minimal_borders yes
+inactive_text_alpha 0.4
+# active_border_color #0c0c0c
+# inactive_border_color #0c0c0c
+
+# Scrolling
+scrollback_lines 10000
+scrollback_pager less --chop-long-lines --RAW-CONTROL-CHARS +INPUT_LINE_NUMBER
+mouse_hide_wait 3.0
+wheel_scroll_multiplier 3.0
+touch_scroll_multiplier 1.0
+
+# Text and ligatures
+disable_ligatures never
+copy_on_select yes
+select_by_word_characters @-./_~?&=%+#
+font_features none
+
+# Audio/visual bell
+enable_audio_bell no
+window_alert_on_bell yes
+bell_on_tab yes
+
+# Hyperlinks and URLs
+open_url_with default
+open_url_modifiers ctrl
+allow_hyperlinks yes
+url_prefixes http https file ftp git
+url_style curly
+
+# Keyboard mappings (you can customize these)
+map ctrl+up scroll_line_up
+map ctrl+down scroll_line_down
+map ctrl+page_up scroll_page_up
+map ctrl+page_down scroll_page_down
+map ctrl+home scroll_home
+map ctrl+end scroll_end
+map ctrl+n new_window
+map ctrl+w close_window
+map ctrl+x scroll_to_prompt 1
+map ctrl+z scroll_to_prompt -1
+
+# Layouts (split panes)
+enabled_layouts fat:bias=50;full_size=1;mirrored=false,horizontal,vertical
+
+# Misc
+allow_remote_control yes
+listen_on unix:/tmp/kitty
+remember_window_size no
+shell_integration enabled
+startup_session default_session.kitty
+
+
+# BEGIN_KITTY_THEME
+# Argonaut
+include current-theme.conf
+# END_KITTY_THEME

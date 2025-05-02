@@ -10,7 +10,7 @@ fi
 
 # Path to your Oh My Zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
-
+export PATH="$PATH:/opt/nvim-linux-x86_64/bin" 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time Oh My Zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -117,7 +117,10 @@ WPATH="/mnt/c/Users/ryand/OneDrive/"
 # for moving from and to windows.
 alias windows="cd $WPATH"
 mvw() {
-  mv "$1" $WPATH
+  mv -r "$1" $WPATH
+}
+cpw() {
+  cp -r "$1" $WPATH
 }
 
 # These are my aliases
@@ -127,6 +130,8 @@ alias nconfig="cd ~/.config/nvim && nvim init.lua"
 alias python="python3"
 alias reload="source ~/.zshrc"
 alias myip='curl ipinfo.io/ip'
+# This is for kitty customisation
+alias kitty-themes='kitty +kitten themes'
 
 gitl() {
     if [ -d .git ]; then 
